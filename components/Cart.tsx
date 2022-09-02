@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View,ScrollView } from 'react-native'
 import React ,{useState}from 'react'
 import IconEntypo from 'react-native-vector-icons/Entypo'
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome'
@@ -17,17 +17,22 @@ const Cart = () => {
  
 
   return (
+
+      <ScrollView>
     <View style={styles.main}>
     <View style={styles.container}>
-      
+     
       <IconEntypo name='shopping-cart' 
-      size ={35}
-      stytle={styles.cartIcon}/>
+      size ={35}/>
+      
+      <View style={styles.topNum}>
       <Text style={styles.total}>{firstCounter+secCounter+thirdCounter+fourCounter}</Text>
+      </View>
       <Text style={styles.text}>Items</Text>
         </View>
 
         <View style={styles.button}>
+          <View style={styles.alignStyle}>
         <TouchableOpacity style={styles.refreshIcon}
          onPress={() =>{
            setFirstCounter (0);
@@ -40,6 +45,7 @@ const Cart = () => {
          name = 'refresh'
         size ={30}/>
      </TouchableOpacity>
+     </View>
       <TouchableOpacity style={styles.recycleIcon}
       onPress={() =>{
         setShowView1(false);
@@ -195,9 +201,9 @@ const Cart = () => {
 </View>
 
   }
-
+   <Text style={styles.newText}>abc</Text>
     </View>
-    
+    </ScrollView>
   )
 }
 
@@ -207,39 +213,44 @@ const styles = StyleSheet.create({
   main:{
     flex:1,
       backgroundColor:"#b5e1f5",
-      justifyContent : "center",
+      //  justifyContent : "space-between",
       alignItems : "center",
-      height:500
+      //  alignContent: 'space-between',
     },
       
     container:{ 
       flexDirection:"row",
-      paddingTop:50,
-      // alignContent:"space-between"
-      justifyContent:"space-between"
+      paddingTop:70,
+      // alignContent: 'space-between',
+      
+    },
+    // cartIcon:{
+    // paddingRight:5
+    // },
 
-     
+    topNum:{
+        paddingLeft:50
     },
-    cartIcon:{
-      marginLeft:10
-    },
+   
     total:{
       fontSize: 30,
-      backgroundColor:"#F44336",
+      backgroundColor:"#03A9F4",
       color:"#FFFFFF",
-      width :80,
+      width :100,
       height :45,
-      paddingLeft:15,
+      paddingLeft:40,
       borderRadius:20
 
     },
     text:{
-      fontSize:30
+      fontSize:30,
+      paddingLeft:20,
+      
     },
     recycleIcon:{
       
       backgroundColor:"#2196F3",
-      borderRadius : 1,
+      borderRadius : 10,
       width :50,
       height :50,
       padding: 10,
@@ -248,47 +259,52 @@ const styles = StyleSheet.create({
     refreshIcon:{
       
       backgroundColor:"#4CAF50",
-      borderRadius : 1,
+      borderRadius : 10,
       width :50,
       height :50,
       padding: 10,
-     
+      
     },
   button:{
    flexDirection:"row",
-   padding: 20
+   padding: 20,
+
+  
     },
     addIcon:{
       backgroundColor:"#808080",
-      borderRadius : 1,
+      borderRadius : 10,
       width :50,
       height :50,
       padding: 10, 
     },
     minusIcon:{
       backgroundColor:"#68CCCA",
-      borderRadius : 2,
       width :50,
       height :50,
       padding: 10, 
-      
+      borderRadius : 10,
     },
     deleteIcon:{
       backgroundColor:"#F44336",
-      borderRadius : 2,
+      
       width :50,
       height :50,
       padding: 10, 
-      
+      borderRadius : 10,
     },
     quantity:{
       fontSize: 30,
       backgroundColor:"#127CDE",
       color:"#FFFFFF",
-      borderRadius : 1,
-      width :50,
+      borderRadius : 10,
+      width :80,
       height :50,
-      // padding: 15, 
-      paddingLeft:15
-    }
+      paddingLeft:30
+    },
+    newText:{
+      paddingTop:1000,
+      color:"#b5e1f5"
+    },
+   
 })
