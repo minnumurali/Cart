@@ -32,7 +32,7 @@ const Cart = () => {
         </View>
 
         <View style={styles.button}>
-          <View style={styles.alignStyle}>
+         
         <TouchableOpacity style={styles.refreshIcon}
          onPress={() =>{
            setFirstCounter (0);
@@ -45,7 +45,7 @@ const Cart = () => {
          name = 'refresh'
         size ={30}/>
      </TouchableOpacity>
-     </View>
+     
       <TouchableOpacity style={styles.recycleIcon}
       onPress={() =>{
         setShowView1(false);
@@ -67,7 +67,15 @@ const Cart = () => {
     { showView1&&
     <View style={styles.button}>
 
-    <Text style={styles.quantity}>{firstCounter}</Text>
+    <Text style={{
+      backgroundColor : firstCounter==0 ? "#ffd507" : "#127CDE",
+      fontSize: 30,
+      color:"#FFFFFF",
+      borderRadius : 10,
+      width :80,
+      height :50,
+      paddingLeft:30
+     }}>{firstCounter}</Text>
     <TouchableOpacity style={styles.addIcon}
      onPress={() =>{
       setFirstCounter ( firstCounter + 1);
@@ -102,7 +110,15 @@ const Cart = () => {
 { showView2&&
     <View style={styles.button}>
 
-<Text style={styles.quantity}>{secCounter}</Text>
+<Text style={{
+      backgroundColor : secCounter==0 ? "#ffd507" : "#127CDE",
+      fontSize: 30,
+      color:"#FFFFFF",
+      borderRadius : 10,
+      width :80,
+      height :50,
+      paddingLeft:30
+     }}>{secCounter}</Text>
 <TouchableOpacity style={styles.addIcon}
  onPress={() =>{
   setSecCounter ( secCounter + 1);
@@ -135,7 +151,15 @@ const Cart = () => {
 { showView3&&
 <View style={styles.button}>
 
-<Text style={styles.quantity}>{thirdCounter}</Text>
+<Text style={{
+      backgroundColor : thirdCounter==0 ? "#ffd507" : "#127CDE",
+      fontSize: 30,
+      color:"#FFFFFF",
+      borderRadius : 10,
+      width :80,
+      height :50,
+      paddingLeft:30
+     }}>{thirdCounter}</Text>
 <TouchableOpacity style={styles.addIcon}
  onPress={() =>{
   setThirdCounter ( thirdCounter + 1);
@@ -169,7 +193,15 @@ const Cart = () => {
 { showView4&&
 <View style={styles.button}>
 
-<Text style={styles.quantity}>{fourCounter}</Text>
+<Text style={{
+      backgroundColor : fourCounter==0 ? "#ffd507" : "#127CDE",
+      fontSize: 30,
+      color:"#FFFFFF",
+      borderRadius : 10,
+      width :80,
+      height :50,
+      paddingLeft:30
+     }}>{fourCounter}</Text>
 <TouchableOpacity style={styles.addIcon}
  onPress={() =>{
   setFourCounter ( fourCounter + 1);
@@ -213,21 +245,13 @@ const styles = StyleSheet.create({
   main:{
     flex:1,
       backgroundColor:"#b5e1f5",
-      //  justifyContent : "space-between",
       alignItems : "center",
-      //  alignContent: 'space-between',
     },
       
     container:{ 
       flexDirection:"row",
       paddingTop:70,
-      // alignContent: 'space-between',
-      
-    },
-    // cartIcon:{
-    // paddingRight:5
-    // },
-
+      },
     topNum:{
         paddingLeft:50
     },
@@ -251,18 +275,19 @@ const styles = StyleSheet.create({
       
       backgroundColor:"#2196F3",
       borderRadius : 10,
-      width :50,
+      width :60,
       height :50,
-      padding: 10,
+      padding: 15,
      
     },
     refreshIcon:{
       
       backgroundColor:"#4CAF50",
       borderRadius : 10,
-      width :50,
+      width :60,
       height :50,
-      padding: 10,
+      padding: 12,
+      paddingLeft:15
       
     },
   button:{
