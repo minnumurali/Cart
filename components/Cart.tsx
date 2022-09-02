@@ -72,9 +72,9 @@ const Cart = () => {
       fontSize: 30,
       color:"#FFFFFF",
       borderRadius : 10,
-      width :80,
+      width :100,
       height :50,
-      paddingLeft:30
+      paddingLeft:40
      }}>{firstCounter}</Text>
     <TouchableOpacity style={styles.addIcon}
      onPress={() =>{
@@ -115,9 +115,9 @@ const Cart = () => {
       fontSize: 30,
       color:"#FFFFFF",
       borderRadius : 10,
-      width :80,
+      width :100,
       height :50,
-      paddingLeft:30
+      paddingLeft:40
      }}>{secCounter}</Text>
 <TouchableOpacity style={styles.addIcon}
  onPress={() =>{
@@ -156,9 +156,9 @@ const Cart = () => {
       fontSize: 30,
       color:"#FFFFFF",
       borderRadius : 10,
-      width :80,
+      width :100,
       height :50,
-      paddingLeft:30
+      paddingLeft:40
      }}>{thirdCounter}</Text>
 <TouchableOpacity style={styles.addIcon}
  onPress={() =>{
@@ -198,9 +198,9 @@ const Cart = () => {
       fontSize: 30,
       color:"#FFFFFF",
       borderRadius : 10,
-      width :80,
+      width :100,
       height :50,
-      paddingLeft:30
+      paddingLeft:40
      }}>{fourCounter}</Text>
 <TouchableOpacity style={styles.addIcon}
  onPress={() =>{
@@ -263,9 +263,8 @@ const styles = StyleSheet.create({
       width :100,
       height :45,
       paddingLeft:40,
-      borderRadius:20
-
-    },
+      borderRadius:20,
+      },
     text:{
       fontSize:30,
       paddingLeft:20,
@@ -299,33 +298,27 @@ const styles = StyleSheet.create({
     addIcon:{
       backgroundColor:"#808080",
       borderRadius : 10,
-      width :50,
+      width :60,
       height :50,
-      padding: 10, 
+      padding: 10,
+      paddingLeft:15 
     },
     minusIcon:{
       backgroundColor:"#68CCCA",
-      width :50,
+      width :60,
       height :50,
-      padding: 10, 
+      padding: 10,
+      paddingLeft:15 ,
       borderRadius : 10,
     },
     deleteIcon:{
       backgroundColor:"#F44336",
       
-      width :50,
+      width :60,
       height :50,
-      padding: 10, 
+      padding: 10,
+      paddingLeft:15 ,
       borderRadius : 10,
-    },
-    quantity:{
-      fontSize: 30,
-      backgroundColor:"#127CDE",
-      color:"#FFFFFF",
-      borderRadius : 10,
-      width :80,
-      height :50,
-      paddingLeft:30
     },
     newText:{
       paddingTop:1000,
